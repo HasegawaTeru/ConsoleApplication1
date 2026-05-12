@@ -8,18 +8,19 @@
 int main()
 {
     std::string str = "Hello World";
+    std::string rev = str;
+
+    std::reverse(str.begin(), str.end());
 
     for (int i = 0; i < 10; i++)
     {
-        if (i % 3 != 2)
+        if (i % 3 == 2)
         {
             std::cout << str << std::endl;
         }
         else
         {
-            std::reverse(str.begin(), str.end());
-            std::cout << str << std::endl;
-            std::reverse(str.begin(), str.end());
+            std::cout << rev << std::endl;
         }
     }
 }
