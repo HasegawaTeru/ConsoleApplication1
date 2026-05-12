@@ -7,22 +7,38 @@
 
 int main()
 {
-    std::string str = "Hello World";
-    std::string rev = str;
+#if 1
+	// C++
+	auto forward = std::string("Hello World!");
+	auto reverse = forward;
 
-    std::reverse(str.begin(), str.end());
+	std::reverse(reverse.begin(), reverse.end());
+#else
+	// C
+	/*const char* forward = "Hell World!";
+	int len = strlen(forward);
+	char* reverse = (char*)malloc(len + 1);
 
-    for (int i = 0; i < 10; i++)
-    {
-        if (i % 3 == 2)
-        {
-            std::cout << str << std::endl;
-        }
-        else
-        {
-            std::cout << rev << std::endl;
-        }
-    }
+	reverse[len] = 0;
+
+	for (int j = 0; j < len; j++)
+	{
+		reverse[j] = forward[len - 1 - j];
+	*/}
+#endif
+	auto i = 10;
+
+	while (i--)
+	{
+		if (i & 1)
+		{
+			std::cout << reverse << std::endl;
+		}
+		else
+		{
+			std::cout << forward << std::endl;
+		}
+	}
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
