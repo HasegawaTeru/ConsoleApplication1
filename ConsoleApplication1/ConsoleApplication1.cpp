@@ -2,10 +2,26 @@
 //
 
 #include <iostream>
+#include <string>
+#include <algorithm>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::string str = "Hello World";
+
+    for (int i = 0; i < 10; i++)
+    {
+        if (i % 3 != 2)
+        {
+            std::cout << str << std::endl;
+        }
+        else
+        {
+            std::reverse(str.begin(), str.end());
+            std::cout << str << std::endl;
+            std::reverse(str.begin(), str.end());
+        }
+    }
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
